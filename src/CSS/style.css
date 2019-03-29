@@ -220,7 +220,6 @@ body {
 }
 
 .theme-switch span:hover {
-  background: transparent;
   color: var(--primary-color);
 
 }
