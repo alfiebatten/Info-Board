@@ -5,7 +5,7 @@ body {
   --selection-background: white;
   --login-background: white;
   --border-color: #e4e4e4;
-  --placeholer-color: #bababa;
+  --placeholder-color: #bababa;
   --other-color-background: #451760;
   --content-info: 'Dark Mode';
 }
@@ -17,7 +17,7 @@ body {
   --selection-background: #212121;
   --login-background: white;
   --border-color: #212121;
-  --placeholer-color: #353535;
+  --placeholder-color: #353535;
   --other-color-background: #479e4e;
   --content-info: 'Light Mode';
 }
@@ -300,7 +300,7 @@ input[type=checkbox] {
   background: transparent;
   top: 6px;
   left: 7px;
-  border: 3px solid var(--text-color);
+  border: 3px solid var(--placeholder-color);
   border-top: none;
   border-right: none;
   transform: rotate(-45deg);
@@ -394,7 +394,8 @@ input[type=checkbox] {
 }
 
 .input::placeholder {
-  color: var(--placeholer-color);
+  color: var(--placeholder-color);
+  transition: .5s ease;
 }
 
 .input:hover::placeholder {
