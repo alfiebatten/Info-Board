@@ -221,7 +221,7 @@ body {
 
 .theme-switch span:hover {
   background: transparent;
-  color: white;
+  color: var(--primary-color);
 
 }
 
@@ -232,7 +232,7 @@ body {
 
 .theme-switch span {
   align-items: center;
-  background: var(--login-background);
+  background: var(--primary-color);
   border-radius: 10px;
   display: flex;
   justify-content: center;
