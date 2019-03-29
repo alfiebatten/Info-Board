@@ -58,8 +58,8 @@ body {
 
   display: grid;
   grid-template-columns: 100px 1fr 300px;
-  grid-template-rows: 50px 175px 30px 200px 70px 30px 1fr;
-  grid-template-areas: ". . ." ". title ." ". . ." ". description ." ". . ." ". find code" ". . ."
+  grid-template-rows: 50px 175px 30px 200px 70px 30px 30px 1fr;
+  grid-template-areas: ". . ." ". title ." ". . ." ". description ." ". . ." "find . ." "code . ."
 }
 
 .title {
@@ -95,8 +95,8 @@ body {
   margin: 0px auto;
   border: 0px;
   text-decoration: none;
-  transform: translateX(-220px);
   transition: .1s ease;
+  transform: translate(100px, -15px);
 }
 
 .find:hover {
@@ -138,8 +138,9 @@ body {
   margin: 0px auto;
   border: 0px;
   text-decoration: none;
-  transform: translateX(-490px);
   transition: .1s ease;
+  transform: translate(270px, -45px);
+
 }
 
 .code:hover {
