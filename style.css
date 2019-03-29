@@ -1,0 +1,402 @@
+body {
+  --background-color: #479e4e;
+  --primary-color: #fcfcfc;
+  --text-color: #212121;
+  --selection-background: white;
+  --login-background: white;
+  --border-color: #e4e4e4;
+  --placeholer-color: #bababa;
+  --other-color-background: #451760;
+  --content-info: 'Dark Mode';
+}
+
+.nightmode {
+  --background-color: #451760;
+  --primary-color: #212121;
+  --text-color: white;
+  --selection-background: #212121;
+  --login-background: white;
+  --border-color: #212121;
+  --placeholer-color: #353535;
+  --other-color-background: #479e4e;
+  --content-info: 'Light Mode';
+}
+
+body {
+  margin: 0px;
+  min-width: 100%;
+  min-height: 100vh;
+
+  background-color: var(--background-color);
+  user-select: none;
+
+  display: grid;
+  grid-template-columns: 1fr 550px;
+  grid-auto-rows: 1fr 100px;
+  grid-template-areas: "polygon login" "polygon theme"
+}
+
+* {
+  transition: all .2s ease;
+}
+
+
+::selection {
+  color: var(--text-color);
+  background: var(--selection-background);
+}
+
+.font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.polygon {
+  grid-area: polygon;
+  clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%);
+
+  background-color: var(--primary-color);
+
+  display: grid;
+  grid-template-columns: 100px 1fr 300px;
+  grid-template-rows: 50px 175px 30px 200px 70px 30px 1fr;
+  grid-template-areas: ". . ." ". title ." ". . ." ". description ." ". . ." ". find code" ". . ."
+}
+
+.title {
+  grid-area: title;
+
+  font-size: 60px;
+  color: var(--text-color);
+  border-bottom: 6px solid var(--background-color);
+
+
+}
+
+.description {
+  grid-area: description;
+  font-size: 32px;
+  color: var(--text-color);
+  padding-left: 15px;
+  border-left: 4px solid var(--background-color)
+}
+
+.find {
+  grid-area: find;
+  height: 40px;
+  width: 140px;
+  color: var(--text-color);
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  background: var(--background-color);
+  text-align: center;
+  padding: 3px;
+  border-radius: 40px;
+  margin: 0px auto;
+  border: 0px;
+  text-decoration: none;
+  transform: translateX(-220px);
+  transition: .1s ease;
+}
+
+.find:hover {
+  background: var(--background-color);
+}
+
+.find span:hover {
+  background: transparent;
+  color: white;
+}
+
+.find:focus {
+  outline:0;
+  display: none;
+}
+
+.find span {
+  align-items: center;
+  background: var(--primary-color);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.code {
+  grid-area: code;
+  height: 40px;
+  width: 140px;
+  color: var(--text-color);
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  background: var(--background-color);
+  text-align: center;
+  padding: 3px;
+  border-radius: 40px;
+  margin: 0px auto;
+  border: 0px;
+  text-decoration: none;
+  transform: translateX(-490px);
+  transition: .1s ease;
+}
+
+.code:hover {
+  background: var(--background-color);
+}
+
+.code span:hover {
+  background: transparent;
+  color: white;
+}
+
+.code:focus {
+  outline:0;
+  display: none;
+}
+
+.code span {
+  align-items: center;
+  background: var(--primary-color);;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.login-container {
+  grid-area: login;
+
+  display: grid;
+  grid-template-columns: 50px 350px 1fr;
+  grid-template-rows: 180px 380px 1fr;
+  grid-template-areas: ". . ." ". box ." ". . ."
+}
+
+.theme-switch-container {
+  grid-area: theme;
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  grid-auto-rows: 1fr 40px;
+  grid-template-areas: ". ." ". theme-switch"
+}
+
+.theme-switch {
+  grid-area: theme-switch;
+
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  background: var(--background-color);
+  text-align: center;
+  padding: 2px;
+  border-radius: 10px;
+  margin: 0px auto;
+  border: 0px;
+  transform: translate(-30px, -30px);
+  transition: content .3s ease;
+  box-shadow: 0 7px 20px rgba(0,0,0,.5);
+}
+
+
+.theme-switch:hover {
+  background: var(--other-color-background);
+}
+
+.theme-switch:hover p:after{
+  content: var(--content-info);
+}
+
+.theme-switch p {
+  width: 100px;
+  height: 1px;
+  color: var(--text-color);
+  transform: translate(-105px, -42px);
+}
+
+.theme-switch span:hover {
+  background: transparent;
+  color: white;
+
+}
+
+.theme-switch:focus {
+  outline:0;
+  display: none;
+}
+
+.theme-switch span {
+  align-items: center;
+  background: var(--login-background);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.box {
+  grid-area: box;
+
+  background-color: var(--primary-color);
+  box-shadow: 0 7px 20px rgba(0,0,0,.5);
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 30px 250px 1fr;
+  grid-template-rows: 10px 50px 30px 45px 20px 45px 30px 10px 10px 25px 30px 35px 10px 10px;
+  grid-template-areas: ". . ." ". login-title ." ". . ." ". username ." ". . ." ". password ." ". . ." ". checkbox ." ". remember ." ". . ." ". login ." ". . ." ". create ." ". . ."
+}
+
+.login-title {
+  grid-area: login-title;
+
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.username {
+  grid-area: username;
+}
+
+.password {
+  grid-area: password;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+.checkbox {
+  grid-area: checkbox;
+  width: 25px;
+  margin: 20px 100px;
+  position: relative;
+  transform: translate(-97px, -27px);
+}
+
+.checkbox label {
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  background: var(--selection-background);
+  border:1px solid var(--border-color);
+}
+
+.checkbox label:after {
+  opacity: 0.8;
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  background: transparent;
+  top: 6px;
+  left: 7px;
+  border: 3px solid var(--text-color);
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+}
+
+.checkbox label:hover::after {
+  opacity: 0.5;
+  border-color: var(--background-color);
+}
+
+.checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+  border-color:  var(--background-color);
+}
+
+.remember {
+  grid-area: remember;
+  font-size: 13px;
+  transform: translate(45px, -25px);
+  cursor: default;
+  color: var(--text-color);
+}
+
+.login {
+  grid-area: login;
+
+  height: 40px;
+  width: 80px;
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  background: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 2px;
+  border-radius: 40px;
+  margin: 0px auto;
+  border: 0px;
+  transform: translateX(-85px);
+  transition: .1s ease;
+}
+
+.login:hover {
+  background: var(--background-color);
+}
+
+.login span:hover {
+  background: transparent;
+  color: white;
+}
+
+.login:focus {
+  outline:0;
+  display: none;
+}
+
+.login span {
+  align-items: center;
+  background: var(--primary-color);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.create {
+  grid-area: create;
+
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.input {
+  border-radius: 10px;
+  border: 0px;
+  padding-left: 15px;
+  color: var(--background-color);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  caret-color: var(--background-color);
+}
+
+.input:hover {
+  border: 1px solid var(--background-color);
+}
+
+.input:focus {
+  outline: none;
+  cursor: auto;
+}
+
+.input::placeholder {
+  color: var(--placeholer-color);
+}
+
+.input:hover::placeholder {
+  color: #212121
+}

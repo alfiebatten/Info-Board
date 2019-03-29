@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title></title>
+  </head>
+  <body class="font">
+    <div class="polygon">
+      <h1 class="title">Info Board</h1>
+      <p class="description">A databases storage system that allows users to view, edit and access their projects and personal details.</p>
+      <a class="find" href="/history"><span>Find out more</span></a>
+      <a class="code" href="#"><span>View the code</span></a>
+    </div>
+
+    <div
+    class="login-container">
+      <div
+      class="box">
+        <p
+          class="login-title">
+          Login
+        </p>
+        <input
+          class="username input"
+          type="text"
+          name="username"
+          value=""
+          placeholder="username"
+          onfocus="this.placeholder = ''"
+          onblur="this.placeholder = 'username'"
+          spellcheck="false">
+        <input
+          class="password input"
+          type="password"
+          name="password"
+          value=""
+          placeholder="password"
+          onfocus="this.placeholder = ''"
+          onblur="this.placeholder = 'password'"
+          spellcheck="false">
+          <div class="checkbox">
+              <input type="checkbox" value="1" id="checkboxInput" name="" />
+              <label for="checkboxInput"></label>
+          </div>
+        <p
+          class="remember">
+          Remember me
+        </p>
+        <button
+          class="login"
+          type="button"
+          name="button">
+          <span
+            class="login-span">
+            Enter
+          </span>
+        </button>
+        <a
+          class="create"
+          href="/create">
+          Dont have an account?
+        </a>
+      </div>
+    </div>
+
+    <div class="theme-switch-container">
+      <button class="theme-switch" data-switch-contrast type="button" name="button"><span></span><p></p></button>
+    </div>
+
+    <script type="text/javascript" src="script.js">
+
+    </script>
+  </body>
+</html>
