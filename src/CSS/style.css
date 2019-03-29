@@ -401,3 +401,129 @@ input[type=checkbox] {
 .input:hover::placeholder {
   color: #212121
 }
+
+@media only screen and (max-width: 1530px) {
+
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows:  300px 600px 1fr;
+    grid-template-areas: "polygon" "login" "theme";
+  }
+
+  .polygon {
+    clip-path: none;
+    background-color: transparent;
+
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-auto-rows: 1fr;
+    grid-template-areas: ". title .";
+    text-align: center;
+  }
+
+  .login-container {
+    grid-template-columns: 1fr 700px 1fr;
+    grid-template-rows: 1fr 760px 1fr;
+  }
+
+  .box {
+    grid-template-columns: 60px 500px 1fr;
+    grid-template-rows: 20px 100px 60px 90px 40px 90px 60px 20px 20px 40px 60px 70px 20px 20px;
+  }
+
+  .login-title {
+    font-size: 40px;
+  }
+
+  .checkbox {
+    width: 50px;
+    margin: 40px 200px;
+    transform: translate(-194px, -54px);
+  }
+
+  .checkbox label {
+    width: 50px;
+    height: 50px;
+  }
+
+  .checkbox label::after {
+    width: 18px;
+    height: 10px;
+    top: 12px;
+    left: 14px
+  }
+
+  .remember {
+    font-size: 33px;
+    transform: translate(90px, -65px);
+  }
+
+  .login {
+    height: 80px;
+    width: 160px;
+    font-size: 30px;
+    padding: 4px;
+    border-radius: 80px;
+    transform: translate(-170px);
+  }
+
+  .login span {
+    border-radius: 80px;
+  }
+
+  .create {
+    font-size: 28px;
+  }
+
+  .input {
+    border-radius: 20px;
+    padding-left: 30px;
+    border: 2px solid var(--border-color);
+    font-size: 33px;
+  }
+
+  .input:hover {
+    border: 2px solid var(--background-color);
+  }
+
+  .title {
+    color: #fcfcfc;
+    font-size: 150px;
+    transform: translateY(-40px);
+  }
+
+  .description {
+    display: none;
+  }
+
+  .find {
+    display: none;
+  }
+
+  .code {
+    display: none;
+  }
+
+  .theme-switch {
+    height: 80px;
+    width: 80px;
+    font-size: 30px;
+    padding: 4px;
+    border-radius: 20px;
+    transform: translate(-60px, -90px);
+    box-shadow: 0 14px 40px rgba(0,0,0,.5);
+  }
+
+  .theme-switch p {
+    content: var(--content-info);
+    width: 200px;
+    height: 2px;
+    transform: translate(-210px, -84px);
+  }
+
+  .theme-switch span {
+    border-radius: 20px;
+  }
+
+
+}
