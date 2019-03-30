@@ -402,12 +402,25 @@ input[type=checkbox] {
   color: #212121
 }
 
-@media only screen and (max-width: 1530px) {
+@media only screen and (max-width: 1400px) {
+  .title {
+    border: none;
+    font-size: 30px;
+    transform: translate(-70px, -50px);
+  }
+
+  .description {
+    font-size: 24px;
+    transform: translate(-70px, -100px);
+  }
+}
+
+@media only screen and (max-width: 1250px) {
 
   body {
     grid-template-columns: 1fr;
-    grid-template-rows:  300px 600px 1fr;
-    grid-template-areas: "polygon" "login" "theme";
+    grid-template-rows:  300px 600px 100px 200px;
+    grid-template-areas: "polygon" "login" "theme" ".";
   }
 
   .polygon {
@@ -510,7 +523,7 @@ input[type=checkbox] {
     font-size: 30px;
     padding: 4px;
     border-radius: 20px;
-    transform: translate(-60px, -90px);
+    transform: translate(-60px, 300px);
     box-shadow: 0 14px 40px rgba(0,0,0,.5);
   }
 
