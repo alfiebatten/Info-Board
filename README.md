@@ -8,11 +8,17 @@ Info Board is an external project that I am working on that will allow me, as we
 
 ### Lightmode
 
-![alt text](https://github.com/alfiebatten/Info-Board/blob/master/assets/screenshotLight.png)
+![alt text](https://github.com/alfiebatten/Info-Board/blob/master/assets/screenshots/screenshotLight.png)
+![alt text](https://github.com/alfiebatten/Info-Board/blob/master/assets/screenshots/screenshotLightSmaller.png)
+![alt text](https://github.com/alfiebatten/Info-Board/blob/master/assets/screenshots/screenshotLightMobile.png)
+#### NOTE: The mobile version is still in development, hence why some aspects may look off.
 
 ### Darkmode
 
-![alt text](https://github.com/alfiebatten/Info-Board/blob/master/assets/ScreenshotDark.png)
+![alt text](https://github.com/alfiebatten/Info-Board/blob/master/assets/screenshots/screenshotDark.png)
+![alt text](https://github.com/alfiebatten/Info-Board/blob/master/assets/screenshots/screenshotDarkSmaller.png)
+![alt text](https://github.com/alfiebatten/Info-Board/blob/master/assets/screenshots/screenshotDarkMobile.png)
+#### NOTE: The mobile version is still in development, hence why some aspects may look off.
 
 ## Current State
 
