@@ -329,7 +329,7 @@ input[type=checkbox] {
 .login {
   grid-area: login;
 
-  height: 40px;
+  height: 35px;
   width: 80px;
   background-color: transparent;
   font-size: 15px;
@@ -341,6 +341,7 @@ input[type=checkbox] {
   border-radius: 40px;
   margin: 0px auto;
   border: 0px;
+  text-decoration: none;
   transform: translateX(-85px);
   transition: .1s ease;
 }

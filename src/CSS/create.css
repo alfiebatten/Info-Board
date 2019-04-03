@@ -1,0 +1,177 @@
+body {
+  --background-color: #479e4e;
+  --primary-color: #fcfcfc;
+  --text-color: #212121;
+  --selection-background: white;
+  --login-background: white;
+  --border-color: #e4e4e4;
+  --placeholder-color: #bababa;
+  --other-color-background: #451760;
+  --content-info: 'Dark Mode';
+}
+
+.nightmode {
+  --background-color: #451760;
+  --primary-color: #212121;
+  --text-color: white;
+  --selection-background: #212121;
+  --login-background: white;
+  --border-color: #212121;
+  --placeholder-color: #353535;
+  --other-color-background: #479e4e;
+  --content-info: 'Light Mode';
+}
+
+body {
+  margin: 0px;
+  min-width: 100%;
+  min-height: 100vh;
+
+  background-color: var(--background-color);
+  user-select: none;
+
+  display: grid;
+  grid-template-columns: 1fr 590px 1fr;
+  grid-auto-rows: 1fr 550px 1fr;
+  grid-template-areas: ". . ." ". login ." ". . ."
+}
+
+* {
+  transition: all .2s ease;
+}
+
+
+::selection {
+  color: var(--text-color);
+  background: var(--selection-background);
+}
+
+.font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.login-container {
+  grid-area: login;
+}
+
+
+.box {
+  grid-area: box;
+
+  background-color: var(--primary-color);
+  box-shadow: 0 7px 20px rgba(0,0,0,.5);
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 30px 250px 30px 250px 30px;
+  grid-template-rows: 10px 50px 30px 45px 30px 45px 30px 45px 50px;
+  grid-template-areas: ". . . . ." ". login-title . . ." ". . . . ." ". first-name . last-name ." ". . . . ." ". email . username ." ". . . . ." ". password . login ." ". . . . .";
+}
+
+.login-title {
+  grid-area: login-title;
+
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.first-name {
+  grid-area: first-name;
+}
+
+.last-name {
+  grid-area: last-name;
+}
+
+.email {
+  grid-area: email;
+}
+
+.username {
+  grid-area: username;
+}
+
+.password {
+  grid-area: password;
+}
+
+.login {
+  grid-area: login;
+
+  height: 35px;
+  width: 80px;
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  background: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 2px;
+  border-radius: 40px;
+  margin: 0px auto;
+  border: 0px;
+  text-decoration: none;
+  transform: translate(80px, 5px);
+  transition: .1s ease;
+}
+
+.login:hover {
+  background: var(--background-color);
+}
+
+.login span:hover {
+  background: transparent;
+  color: white;
+}
+
+.login:focus {
+  outline:0;
+  display: none;
+}
+
+.login span {
+  align-items: center;
+  background: var(--primary-color);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.create {
+  grid-area: create;
+
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+
+.input {
+  border-radius: 10px;
+  border: 0px;
+  padding-left: 15px;
+  color: var(--background-color);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  caret-color: var(--background-color);
+}
+
+.input:hover {
+  border: 1px solid var(--background-color);
+}
+
+.input:focus {
+  outline: none;
+  cursor: auto;
+}
+
+.input::placeholder {
+  color: var(--placeholder-color);
+  transition: .5s ease;
+}
+
+.input:hover::placeholder {
+  color: #212121
+}
