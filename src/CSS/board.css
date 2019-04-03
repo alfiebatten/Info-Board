@@ -1,0 +1,142 @@
+body {
+  --background-color: #479e4e;
+  --primary-color: #fcfcfc;
+  --text-color: #212121;
+  --selection-background: white;
+  --login-background: white;
+  --border-color: #e4e4e4;
+  --placeholder-color: #bababa;
+  --other-color-background: #451760;
+  --content-info: 'Dark Mode';
+}
+
+.nightmode {
+  --background-color: #451760;
+  --primary-color: #212121;
+  --text-color: white;
+  --selection-background: #212121;
+  --login-background: white;
+  --border-color: #212121;
+  --placeholder-color: #353535;
+  --other-color-background: #479e4e;
+  --content-info: 'Light Mode';
+}
+
+body {
+  margin: 0px;
+  min-width: 100%;
+  min-height: 100vh;
+
+  background-color: var(--primary-color);
+  user-select: none;
+
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  grid-auto-rows: 30px 75px 50px 75px 1fr 30px;
+  grid-template-areas: ". . ." ". title-container ." ". . ." ". option-container ." ". board-container ." ". . .";
+ }
+
+* {
+  transition: all .2s ease;
+}
+
+
+::selection {
+  color: var(--text-color);
+  background: var(--selection-background);
+}
+
+.font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.title-container {
+  grid-area: title-container
+}
+
+.option-container {
+  grid-area: option-container;
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 200px 120px 100px 120px 100px 120px 1fr 120px 200px;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". project . documents . devices . settings ."
+}
+
+.board-container {
+  grid-area: board-container;
+
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". one ." ". two ." ". three ." ". four ." ". five ." ". six ." ". seven .";
+}
+
+.button {
+  background-color: transparent;
+  font-size: 20px;
+  border: 0px;
+}
+
+.button:hover {
+  border-bottom: 3px solid var(--background-color);
+}
+
+.project {
+  grid-area: project;
+}
+
+.documents {
+  grid-area: documents;
+}
+
+.devices {
+  grid-area: devices;
+}
+
+.settings {
+  grid-area: settings;
+}
+
+.row {
+  background-color: #e4e4e4;
+  opacity: .2;
+}
+
+.rowGreen {
+  background-color: var(--background-color);
+  opacity: .2;
+}
+
+.row1 {
+  grid-area: one;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.row2 {
+  grid-area: two;
+}
+
+.row3 {
+  grid-area: three
+}
+
+.row4 {
+  grid-area: four
+}
+
+.row5 {
+  grid-area: five
+}
+
+.row6 {
+  grid-area: six
+}
+
+.row7 {
+  grid-area: seven;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
