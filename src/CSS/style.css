@@ -323,48 +323,36 @@ input[type=checkbox] {
   color: var(--text-color);
 }
 
+
 .login {
   grid-area: login;
-
-  height: 35px;
+  height: 40px;
   width: 80px;
   background-color: transparent;
   font-size: 15px;
   cursor: pointer;
-  background: var(--background-color);
+  background: var(--primary-color);
   color: var(--text-color);
   text-align: center;
   padding: 2px;
   border-radius: 40px;
   margin: 0px auto;
-  border: 0px;
+  border: 2px solid var(--background-color);
   text-decoration: none;
-  transform: translateX(-85px);
-  transition: .1s ease;
+  transform: translate(-80px, 0px);
+  transition: .2s ease;
 }
 
 .login:hover {
   background: var(--background-color);
-}
-
-.login span:hover {
-  background: transparent;
+  border: var(--primary-color);
   color: white;
 }
+
 
 .login:focus {
   outline:0;
   display: none;
-}
-
-.login span {
-  align-items: center;
-  background: var(--primary-color);
-  border-radius: 40px;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
 }
 
 .create {
