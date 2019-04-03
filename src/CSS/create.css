@@ -5,7 +5,7 @@ body {
   --selection-background: white;
   --login-background: white;
   --border-color: #e4e4e4;
-  --placeholder-color: #bababa;
+  --placeholder-color: #999999;
   --other-color-background: #451760;
   --content-info: 'Dark Mode';
 }
@@ -32,8 +32,8 @@ body {
 
   display: grid;
   grid-template-columns: 1fr 590px 1fr;
-  grid-auto-rows: 1fr 550px 1fr;
-  grid-template-areas: ". . ." ". login ." ". . ."
+  grid-auto-rows: 50px 100px 1fr 335px 1fr 150px;
+  grid-template-areas: ". . ." ". title ." ". . ." ". login ." ". . ." ". . ."
 }
 
 * {
@@ -48,6 +48,17 @@ body {
 
 .font {
   font-family: 'Open Sans', sans-serif;
+}
+
+.title-container {
+  grid-area: title;
+  text-align: center;
+  font-size: 45px;
+}
+
+.title-container a {
+  color: white;
+  text-decoration: none;
 }
 
 .login-container {
@@ -96,49 +107,39 @@ body {
   grid-area: password;
 }
 
+
+
 .login {
   grid-area: login;
-
-  height: 35px;
+  height: 40px;
   width: 80px;
   background-color: transparent;
   font-size: 15px;
   cursor: pointer;
-  background: var(--background-color);
+  background: var(--primary-color);
   color: var(--text-color);
   text-align: center;
   padding: 2px;
   border-radius: 40px;
   margin: 0px auto;
-  border: 0px;
+  border: 2px solid var(--background-color);
   text-decoration: none;
   transform: translate(80px, 5px);
-  transition: .1s ease;
+  transition: .2s ease;
 }
 
 .login:hover {
   background: var(--background-color);
-}
-
-.login span:hover {
-  background: transparent;
+  border: var(--primary-color);
   color: white;
 }
+
 
 .login:focus {
   outline:0;
   display: none;
 }
 
-.login span {
-  align-items: center;
-  background: var(--primary-color);
-  border-radius: 40px;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-}
 
 .create {
   grid-area: create;

@@ -13,73 +13,79 @@
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans"
       rel="stylesheet">
-    <title></title>
+    <title>Info Board</title>
   </head>
   <body class="font">
+    <div class="title-container">
+      <a href="../">Info Board</a>
+    </div>
     <div
     class="login-container">
-      <div
-        class="box">
-        <p
-          class="login-title">
-          Create
-        </p>
-        <input
-          class="first-name input"
-          type="text"
-          name="first-name"
-          value=""
-          placeholder="first name"
-          onfocus="this.placeholder = ''"
-          onblur="this.placeholder = 'first name'"
-          spellcheck="false">
-        <input
-          class="last-name input"
-          type="text"
-          name="last-name"
-          value=""
-          placeholder="last name"
-          onfocus="this.placeholder = ''"
-          onblur="this.placeholder = 'last name'"
-          spellcheck="false">
-        <input
-          class="email input"
-          type="text"
-          name="email"
-          value=""
-          placeholder="email"
-          onfocus="this.placeholder = ''"
-          onblur="this.placeholder = 'email'"
-          spellcheck="false">
-        <input
-          class="username input"
-          type="text"
-          name="username"
-          value=""
-          placeholder="username"
-          onfocus="this.placeholder = ''"
-          onblur="this.placeholder = 'username'"
-          spellcheck="false">
-        <input
-          class="password input"
-          type="password"
-          name="password"
-          value=""
-          placeholder="password"
-          onfocus="this.placeholder = ''"
-          onblur="this.placeholder = 'password'"
-          spellcheck="false">
-        <a
-          href="/"
-          class="login"
-          type="button"
-          name="button">
-          <span
-            class="login-span">
-            Enter
-          </span>
-        </a>
-      </div>
+        <form class="box" action="/" method="post" onsubmit="return checkforblank()">
+            <p
+              class="login-title">
+              Create
+            </p>
+            <input
+              class="first-name input"
+              type="text"
+              name="first-name"
+              id="fname"
+              value=""
+              placeholder="First Name"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'First Name'"
+              spellcheck="false">
+            <input
+              class="last-name input"
+              type="text"
+              name="last-name"
+              id="lname"
+              value=""
+              placeholder="Last Name"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Last Name'"
+              spellcheck="false">
+            <input
+              class="email input"
+              type="email"
+              name="email"
+              id="email"
+              value=""
+              placeholder="E-Mail"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'E-Mail'"
+              spellcheck="false">
+            <input
+              class="username input"
+              type="text"
+              name="username"
+              id="username"
+              value=""
+              placeholder="Username"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Username'"
+              spellcheck="false">
+            <input
+              class="password input"
+              type="password"
+              name="password"
+              id="password"
+              value=""
+              placeholder="Password"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Password'"
+              spellcheck="false">
+            <input
+              href="/"
+              class="login"
+              type="submit"
+              value="Enter"
+              name="button">
+        </form>
     </div>
+    <script type="text/javascript" src="script.js">
+
+    </script>
   </body>
 </html>
